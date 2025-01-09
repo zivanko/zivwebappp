@@ -3,58 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image and Video from Azure</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        .button {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        .content {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Azure Storage Links</title>
 </head>
 <body>
-    <h1>Image and Video from Azure</h1>
-    <p>Choose what to display:</p>
-    <button class="button" onclick="showImage()">Image</button>
-    <button class="button" onclick="showVideo()">Video</button>
-
-    <div id="content" class="content"></div>
-
-    <script>
-        function showImage() {
-            document.getElementById("content").innerHTML = `
-                <img src="https://zivsto.blob.core.windows.net/containerziv/Capture.PNG?sp=r&st=2025-01-07T09:51:17Z&se=2025-01-07T17:51:17Z&spr=https&sv=2022-11-02&sr=b&sig=%2BTX5cgL3mNAJbIePoXkXJxT7rZ1fmJvBbynLuS9UZMw%3D" 
-                     alt="Azure Image" 
-                     width="600">
-            `;
-        }
-
-        function showVideo() {
-            document.getElementById("content").innerHTML = `
-                <video width="600" controls>
-                    <source src="https://zivsto.blob.core.windows.net/containerziv/Kogan.com%20TV%20Ad%20-%20Vending%20Machine%20-%2015%20sec.mp4?sp=racwdyti&st=2025-01-07T09:46:11Z&se=2025-01-07T17:46:11Z&spr=https&sv=2022-11-02&sr=b&sig=yZ%2BEafUIAAuWHHD2mTn5pgKHyLwthLRE4ryZMfsWMnc%3D" 
-                            type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            `;
-        }
-    </script>
+    <h1>Welcome to My Azure Storage Links</h1>
+    <button onclick="window.location.href='https://nikitastorageaccount1.blob.core.windows.net/videos/video.mp4?sp=r&st=2025-01-07T09:15:04Z&se=2025-01-07T17:15:04Z&spr=https&sv=2022-11-02&sr=c&sig=qrJHIe%2BU7Yz6%2FxgCvuT8lwYaUaz%2B1yIPI954tbVkqxs%3D'">Watch Video</button>
+    <button onclick="window.location.href='https://nikitastorageaccount1.blob.core.windows.net/images/image.jpeg?sp=r&st=2025-01-07T09:14:43Z&se=2025-01-07T17:14:43Z&spr=https&sv=2022-11-02&sr=c&sig=UoTQs%2Fgdwxi0B5%2BFTIFNMC8zC9nmLafUYWeIABCGTVo%3D'">View Image</button>
 </body>
 </html>
