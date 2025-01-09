@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Video from Azure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image and Video from Azure</h1>
+    <p>Choose what to display:</p>
+    <button class="button" onclick="showImage()">Image</button>
+    <button class="button" onclick="showVideo()">Video</button>
+
+    <div id="content" class="content"></div>
+
+    <script>
+        function showImage() {
+            document.getElementById("content").innerHTML = `
+                <img src="https://zivsto.blob.core.windows.net/containerziv/Capture.PNG?sp=r&st=2025-01-07T09:51:17Z&se=2025-01-07T17:51:17Z&spr=https&sv=2022-11-02&sr=b&sig=%2BTX5cgL3mNAJbIePoXkXJxT7rZ1fmJvBbynLuS9UZMw%3D" 
+                     alt="Azure Image" 
+                     width="600">
+            `;
+        }
+
+        function showVideo() {
+            document.getElementById("content").innerHTML = `
+                <video width="600" controls>
+                    <source src="https://zivsto.blob.core.windows.net/containerziv/Kogan.com%20TV%20Ad%20-%20Vending%20Machine%20-%2015%20sec.mp4?sp=racwdyti&st=2025-01-07T09:46:11Z&se=2025-01-07T17:46:11Z&spr=https&sv=2022-11-02&sr=b&sig=yZ%2BEafUIAAuWHHD2mTn5pgKHyLwthLRE4ryZMfsWMnc%3D" 
+                            type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+        }
+    </script>
+</body>
+</html>
